@@ -8,13 +8,13 @@
   --haze: #a8c1c8;      /* quiet text on the deep */
   --slate: #4b6873;     /* quiet text on paper */
   --brass: #d3aa5c;     /* the one accent */
-  --brass-dark: #8a6a26;
+  --brass-dark: #75571a;
   --rule: rgba(243, 248, 248, .17);
   --rule-paper: rgba(10, 38, 48, .18);
 
-  --display: "Bodoni Moda", Didot, "Bodoni 72", Georgia, serif;
-  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
-  --data: "DM Mono", Consolas, "SF Mono", monospace;
+  --display: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  --body: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  --data: Consolas, "SF Mono", Menlo, monospace;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -30,7 +30,7 @@ a:hover { color: var(--brass); }
 a:focus-visible, summary:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
 p { margin: 0; }
 h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
-kbd { font: 400 .88em var(--data); color: var(--brass); }
+kbd { font: 700 .94em var(--body); color: var(--brass); }
 
 .wrap {
   width: 100%; max-width: 1240px; margin-inline: auto;
@@ -46,11 +46,11 @@ kbd { font: 400 .88em var(--data); color: var(--brass); }
 .raised { background: var(--deep); }
 
 /* type */
-h2 { font: 400 clamp(36px, 5.6vw, 68px)/1.04 var(--display); letter-spacing: -.012em; }
-h2 em, h1 em { font-style: italic; color: var(--brass); }
+h2 { font: 700 clamp(30px, 4.6vw, 56px)/1.1 var(--display); letter-spacing: -.024em; }
+h2 em { font-style: normal; color: var(--brass); }
 .paper h2 em { color: var(--brass-dark); }
-h3 { font: 500 18px/1.3 var(--body); margin-bottom: 8px; }
-.label { font: 400 12.5px/1.4 var(--data); letter-spacing: .04em; color: var(--brass); margin-bottom: 18px; }
+h3 { font: 700 18px/1.3 var(--body); margin-bottom: 8px; }
+.label { font: 700 14px/1.4 var(--body); color: var(--brass); margin-bottom: 14px; }
 .paper .label { color: var(--brass-dark); }
 .quiet { color: var(--haze); }
 .paper .quiet { color: var(--slate); }
@@ -58,7 +58,7 @@ h3 { font: 500 18px/1.3 var(--body); margin-bottom: 8px; }
 .prose p + p { margin-top: 14px; }
 .note { font-size: 14px; line-height: 1.55; color: var(--haze); max-width: 74ch; }
 .paper .note { color: var(--slate); }
-.statement { font: 400 clamp(25px, 3.6vw, 40px)/1.26 var(--display); max-width: 25em; text-wrap: pretty; }
+.statement { font: 500 clamp(21px, 2.9vw, 32px)/1.38 var(--display); letter-spacing: -.012em; max-width: 30em; text-wrap: pretty; }
 
 /* hero: the film and the name */
 .hero { position: relative; background: var(--abyss); }
@@ -68,15 +68,16 @@ h3 { font: 500 18px/1.3 var(--body); margin-bottom: 8px; }
   background: linear-gradient(180deg, rgba(8, 37, 48, 0) 46%, rgba(8, 37, 48, .55) 74%, var(--abyss) 100%);
 }
 .hero-copy { position: absolute; left: 0; right: 0; bottom: clamp(14px, 3vw, 44px); z-index: 1; }
-h1 { font: 400 clamp(46px, 10.4vw, 150px)/.98 var(--display); letter-spacing: -.022em; }
-.hero-line { font-size: clamp(16px, 2.1vw, 22px); line-height: 1.35; margin-top: clamp(8px, 1.4vw, 16px); max-width: 40em; }
+h1 { font: 800 clamp(40px, 8.2vw, 112px)/1.02 var(--display); letter-spacing: -.035em; }
+h1 em { font: 800 .34em/1 var(--body); letter-spacing: 0; background: var(--foam); color: var(--abyss); padding: .2em .42em; border-radius: 6px; vertical-align: .95em; margin-left: .1em; white-space: nowrap; }
+.hero-line { font-weight: 500; font-size: clamp(16px, 2.1vw, 22px); line-height: 1.35; margin-top: clamp(8px, 1.4vw, 16px); max-width: 40em; }
 
 /* the builder's plate, in place of tags */
 .plate { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .plate div { padding: 16px 18px 18px 0; min-width: 0; }
 .plate div + div { padding-left: 18px; border-left: 1px solid var(--rule); }
-.plate dt { font: 400 12px/1.4 var(--data); letter-spacing: .04em; color: var(--brass); margin-bottom: 6px; }
-.plate dd { margin: 0; font: 400 clamp(17px, 1.9vw, 21px)/1.22 var(--display); }
+.plate dt { font: 600 13px/1.4 var(--body); color: var(--brass); margin-bottom: 6px; }
+.plate dd { margin: 0; font: 700 clamp(15px, 1.6vw, 18px)/1.3 var(--display); }
 
 /* film */
 .bleed { position: relative; background: var(--deep); }
@@ -101,8 +102,8 @@ h1 { font: 400 clamp(46px, 10.4vw, 150px)/.98 var(--display); letter-spacing: -.
 .shot video, .shot img { aspect-ratio: 16 / 9; object-fit: cover; }
 .shot figcaption {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 12px 9px;
-  font: 400 12px/1.3 var(--data); color: var(--foam);
-  background: linear-gradient(180deg, rgba(8, 37, 48, 0), rgba(8, 37, 48, .72));
+  font: 600 13px/1.3 var(--body); color: var(--foam);
+  background: linear-gradient(180deg, rgba(8, 37, 48, 0), rgba(8, 37, 48, .78));
 }
 .fleet { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
 .fleet .lead-shot { grid-column: span 2; grid-row: span 2; }
@@ -113,13 +114,13 @@ h1 { font: 400 clamp(46px, 10.4vw, 150px)/.98 var(--display); letter-spacing: -.
 .register-wrap { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 15px; }
 th, td { text-align: left; padding: 10px 14px 10px 0; vertical-align: baseline; }
-th { font: 400 12px/1.3 var(--data); letter-spacing: .03em; color: var(--brass); border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th { font: 700 13px/1.3 var(--body); color: var(--brass); border-bottom: 1px solid var(--rule); white-space: nowrap; }
 td { border-bottom: 1px solid var(--rule); }
 .paper th { color: var(--brass-dark); border-bottom-color: var(--ink); }
 .paper td { border-bottom-color: var(--rule-paper); }
-.register td:not(:first-child), .register th:not(:first-child) { font-family: var(--data); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; padding-left: 14px; padding-right: 0; }
-.register th:not(:first-child) { font-size: 12px; }
-.register td:first-child { font: 400 18px/1.25 var(--display); }
+.register td:not(:first-child), .register th:not(:first-child) { font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; padding-left: 14px; padding-right: 0; }
+.register th:not(:first-child) { font-size: 13px; font-weight: 700; }
+.register td:first-child { font: 700 16px/1.3 var(--display); }
 
 /* facts as rows */
 .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
@@ -127,39 +128,39 @@ td { border-bottom: 1px solid var(--rule); }
 .paper .rows, .paper .rows li { border-color: var(--rule-paper); }
 
 /* the types of water, set as a sentence */
-.waters { font: italic 400 clamp(23px, 3.4vw, 38px)/1.26 var(--display); max-width: 27em; color: var(--foam); }
-.waters span { color: var(--brass); font-style: normal; }
+.waters { font: 700 clamp(21px, 2.9vw, 32px)/1.32 var(--display); letter-spacing: -.015em; max-width: 27em; color: var(--foam); }
+.waters span { color: var(--brass); }
 
 /* measured */
 .gauges { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--rule); }
 .gauges div { padding: 20px 18px 22px 0; min-width: 0; }
 .gauges div + div { padding-left: 18px; border-left: 1px solid var(--rule); }
-.gauges dd { margin: 0; font: 400 clamp(34px, 5.4vw, 66px)/1 var(--display); font-variant-numeric: lining-nums; white-space: nowrap; }
-.gauges dt { font-size: 14.5px; line-height: 1.4; margin-top: 12px; color: var(--foam); }
-.gauges small { display: block; font: 400 12px/1.5 var(--data); color: var(--haze); margin-top: 8px; }
+.gauges dd { margin: 0; font: 800 clamp(30px, 4.8vw, 58px)/1 var(--display); letter-spacing: -.03em; white-space: nowrap; }
+.gauges dt { font-size: 14.5px; font-weight: 600; line-height: 1.4; margin-top: 12px; color: var(--foam); }
+.gauges small { display: block; font: 500 13px/1.5 var(--body); color: var(--haze); margin-top: 8px; }
 
 /* steps and questions */
 .steps { list-style: none; counter-reset: s; margin: 0; padding: 0; }
 .steps li { counter-increment: s; display: grid; grid-template-columns: 38px minmax(0, 1fr); padding: 14px 0; border-top: 1px solid var(--rule-paper); }
-.steps li::before { content: counter(s); font: 400 24px/1.1 var(--display); color: var(--brass-dark); }
+.steps li::before { content: counter(s); font: 800 22px/1.2 var(--display); color: var(--brass-dark); }
 details { border-top: 1px solid var(--rule-paper); }
 details:last-of-type { border-bottom: 1px solid var(--rule-paper); }
-summary { cursor: pointer; padding: 14px 26px 14px 0; font-weight: 500; list-style: none; position: relative; }
+summary { cursor: pointer; padding: 14px 26px 14px 0; font-weight: 600; list-style: none; position: relative; }
 summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; position: absolute; right: 2px; top: 10px; font: 400 22px/1.3 var(--display); color: var(--brass-dark); }
+summary::after { content: "+"; position: absolute; right: 2px; top: 10px; font: 500 22px/1.3 var(--display); color: var(--brass-dark); }
 details[open] summary::after { content: "\2212"; }
 details p { padding-bottom: 16px; }
-.docs-link { font: 400 clamp(22px, 2.8vw, 30px)/1.2 var(--display); display: inline-block; }
+.docs-link { font: 700 clamp(19px, 2.2vw, 24px)/1.25 var(--display); display: inline-block; }
 
 footer { padding-block: 34px 44px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--haze); }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 
 /* documentation */
 .doc { padding-block: 40px 60px; }
-.doc .back { font: 400 13px var(--data); margin-bottom: 18px; }
-.doc h1 { font-size: clamp(44px, 7vw, 84px); margin-bottom: 8px; }
-.doc h2 { font-size: clamp(28px, 3.6vw, 42px); margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule); margin-bottom: 16px; scroll-margin-top: 12px; }
-.doc h3 { font: 500 20px/1.3 var(--body); margin-top: 34px; margin-bottom: 10px; scroll-margin-top: 12px; }
+.doc .back { font: 600 14px var(--body); margin-bottom: 18px; }
+.doc h1 { font-size: clamp(38px, 6vw, 68px); margin-bottom: 8px; }
+.doc h2 { font-size: clamp(25px, 3.2vw, 36px); margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule); margin-bottom: 16px; scroll-margin-top: 12px; }
+.doc h3 { font: 700 20px/1.3 var(--body); margin-top: 34px; margin-bottom: 10px; scroll-margin-top: 12px; }
 .doc .col { max-width: 74ch; }
 .doc p, .doc ul, .doc ol { margin-block: 0 14px; color: var(--foam); }
 .doc ul, .doc ol { padding-left: 22px; }
