@@ -16,11 +16,10 @@ Both pages work inside an iframe:
 
 - Links to other pages open in a new tab.
 - The page posts its height to the parent window as `{type: "ocean-physics-pro-height", height}`.
-- The product page hides its own video, because a store page embeds the video itself.
 
 ```html
 <iframe src="https://blenderprocedural.github.io/ocean-physics-pro/"
-        width="100%" height="6400" style="border:0" loading="lazy" title="Ocean Physics Pro for Blender"></iframe>
+        width="100%" height="11900" style="border:0" loading="lazy" title="Ocean Physics Pro for Blender"></iframe>
 ```
 
 ## License
