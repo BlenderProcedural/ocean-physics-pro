@@ -106,6 +106,13 @@ table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 0 0 12p
 th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); color: var(--soft); vertical-align: top; }
 th { color: var(--text); font-weight: 750; background: var(--card); }
 .tablewrap { overflow-x: auto; }
+.reel-section { padding-top: 30px; }
+.reel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.reel .media { border-radius: 10px; box-shadow: none; }
+.fleet { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.fleet .media { border-radius: 10px; box-shadow: none; }
+.card .media video { width: 100%; }
+@media (max-width: 820px) { .reel, .fleet { grid-template-columns: repeat(2, 1fr); } }
 pre { background: var(--bg2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; overflow-x: auto; margin: 0 0 14px; }
 pre code { background: none; border: 0; padding: 0; }
 
