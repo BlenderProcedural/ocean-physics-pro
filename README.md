@@ -19,7 +19,7 @@ Both pages work inside an iframe:
 
 ```html
 <iframe src="https://blenderprocedural.github.io/ocean-physics-pro/"
-        width="100%" height="12090" style="border:0" loading="lazy" title="Ocean Physics Pro for Blender"></iframe>
+        width="100%" height="11950" style="border:0" loading="lazy" title="Ocean Physics Pro for Blender"></iframe>
 ```
 
 ## License
