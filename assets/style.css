@@ -201,6 +201,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 :root { --r: 12px; --r-big: 18px; --inset: 12px; }
 .hero, .bleed, .paper, .raised { border-radius: var(--r-big); overflow: hidden; margin-inline: var(--inset); }
 .hero { margin-top: var(--inset); }
+.framed { --r-big: 12px; }
 .framed .hero, .framed .bleed, .framed .paper, .framed .raised { margin-inline: 0; }
 .framed .hero { margin-top: 0; }
 .shot, .film { border-radius: var(--r); overflow: hidden; }
