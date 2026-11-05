@@ -196,3 +196,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 @media (max-width: 480px) {
   .hero video { aspect-ratio: 4 / 5; }
 }
+
+/* rounded corners: pictures, bands and boxes alike */
+:root { --r: 12px; --r-big: 18px; --inset: 12px; }
+.hero, .bleed, .paper, .raised { border-radius: var(--r-big); overflow: hidden; margin-inline: var(--inset); }
+.hero { margin-top: var(--inset); }
+.framed .hero, .framed .bleed, .framed .paper, .framed .raised { margin-inline: 0; }
+.framed .hero { margin-top: 0; }
+.shot, .film { border-radius: var(--r); overflow: hidden; }
+.pair, .fleet { gap: 8px; }
+.plate, .gauges { border: 1px solid var(--rule); border-radius: var(--r); padding-inline: 18px; }
+.doc .media { border-radius: var(--r); overflow: hidden; }
+.doc pre { border-radius: var(--r); }
+.toc { border: 1px solid var(--rule); border-radius: var(--r); padding: 16px 20px; }
+@media (max-width: 760px) {
+  :root { --inset: 8px; }
+  .plate, .gauges { padding-inline: 14px; }
+}
