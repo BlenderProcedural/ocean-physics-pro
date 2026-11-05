@@ -8,7 +8,7 @@ This repository holds only the description, the documentation and their images. 
 - Documentation: `docs.html`, at https://blenderprocedural.github.io/ocean-physics-pro/docs.html
 - Images: `images/`
 - Silent loops: `media/`, loaded when they come near the screen.
-- Style, iframe helper and the loop player: `assets/`. Fonts come from Google Fonts.
+- Style, iframe helper and the loop player: `assets/`. The type is Helvetica from the system, no web font.
 
 ## Embedding
 

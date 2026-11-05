@@ -12,8 +12,8 @@
   --rule: rgba(243, 248, 248, .17);
   --rule-paper: rgba(10, 38, 48, .18);
 
-  --display: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
-  --body: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  --display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --body: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --data: Consolas, "SF Mono", Menlo, monospace;
   color-scheme: dark;
 }
