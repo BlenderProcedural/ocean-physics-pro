@@ -9,7 +9,7 @@
 <meta property="og:description" content="Drive boats and ships on a real-time ocean. Record the drive, bake it and render it in EEVEE or Cycles.">
 <meta property="og:image" content="https://blenderprocedural.github.io/ocean-physics-pro/images/cover.jpg">
 <link rel="icon" href="images/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=8">
+<link rel="stylesheet" href="assets/style.css?v=9">
 </head>
 <body>
 
@@ -203,22 +203,38 @@
   </div>
 </section>
 
+<div class="bleed over">
+  <video data-src="media/floating-side.mp4" poster="media/floating-side.jpg" muted loop playsinline preload="none" width="1280" height="720" aria-label="A fishing boat pushing through floating crates, barrels, buoys and logs, which bob on the waves and bounce off its hull"></video>
+  <div class="over-copy"><div class="wrap">
+    <p class="label">Floating objects</p>
+    <h2>Anything can float, <em>and get hit.</em></h2>
+  </div></div>
+</div>
+<section class="band">
+  <div class="wrap stack">
+    <div class="two">
+      <p class="prose"><b>Make Floating</b> gives any mesh a physics body with buoyancy. Crates, barrels, buoys and logs bob on the waves, ride the wake and collide with the vessel, each other, piers and the coast.</p>
+      <ul class="rows">
+        <li><b>Buoyancy</b> comes from each object's own shape and density. A buoy with a low centre of mass stands upright.</li>
+        <li><b>Collisions</b> work both ways. The boat pushes objects aside, and slows when it hits a heavy log.</li>
+        <li><b>Make Collider</b> turns a mesh into a fixed obstacle, such as a pier or a rock.</li>
+        <li><b>The take records it all</b>, so a bake plays the same collisions you drove.</li>
+      </ul>
+    </div>
+    <figure class="shot"><video data-src="media/floating-air.mp4" poster="media/floating-air.jpg" muted loop playsinline preload="none" width="1280" height="720" aria-label="The same boat from above, shoving floating objects out of its way"></video><figcaption>The same take from the air, rendered in Cycles</figcaption></figure>
+    <p class="note">Shapes are convex hulls; a concave object made of pieces can use Convex Parts.</p>
+  </div>
+</section>
+
 <section class="band raised">
   <div class="wrap two">
-    <figure class="shot"><img src="images/floating-objects.jpg" alt="A boat driving past a pier through floating crates, buoys and logs" loading="lazy" width="1280" height="640"></figure>
-    <div class="stack">
-      <div>
-        <p class="label">Floating objects</p>
-        <p class="prose"><b>Make Floating</b> gives any mesh a physics body with buoyancy, and <b>Make Collider</b> makes a fixed obstacle. Crates, barrels, buoys and logs bob and drift, ride the wake and collide with the vessel, each other, piers and the coast. The boat feels them too, and slows when it hits a heavy log.</p>
-      </div>
-      <div>
-        <p class="label">Autopilot</p>
-        <p class="prose">Draw the course as a curve, set the speed and press <b>Drive Along Path</b>. The vessel steers itself, slows in sharp turns and records a normal take.</p>
-      </div>
-      <div>
-        <p class="label">Cameras</p>
-        <p class="prose"><b>Add Cinematic Cameras</b> makes Drone, Side, Onboard and Orbit cameras that follow the vessel. <b>Cut Between Them</b> adds timeline markers, so Ctrl+F12 renders a cut sequence straight away.</p>
-      </div>
+    <div>
+      <p class="label">Autopilot</p>
+      <p class="prose">Draw the course as a curve, set the speed and press <b>Drive Along Path</b>. The vessel steers itself, slows in sharp turns and records a normal take.</p>
+    </div>
+    <div>
+      <p class="label">Cameras</p>
+      <p class="prose"><b>Add Cinematic Cameras</b> makes Drone, Side, Onboard and Orbit cameras that follow the vessel. <b>Cut Between Them</b> adds timeline markers, so Ctrl+F12 renders a cut sequence straight away.</p>
     </div>
   </div>
 </section>
