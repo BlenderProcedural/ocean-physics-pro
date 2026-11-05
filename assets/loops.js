@@ -1,5 +1,6 @@
 // The silent loops load when they come near the screen and play only while they are on it.
 (function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;   // the posters stay
   var vids = [].slice.call(document.querySelectorAll('video[data-src]'));
   function start(v) {
     if (!v.getAttribute('src')) v.setAttribute('src', v.getAttribute('data-src'));

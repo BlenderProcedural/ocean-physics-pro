@@ -7,7 +7,8 @@ This repository holds only the description, the documentation and their images. 
 - Product page: `index.html`, served with GitHub Pages at https://blenderprocedural.github.io/ocean-physics-pro/
 - Documentation: `docs.html`, at https://blenderprocedural.github.io/ocean-physics-pro/docs.html
 - Images: `images/`
-- Style and iframe helper: `assets/`. Fonts (Inter) are bundled in `fonts/`, so the pages make no external requests apart from the video on the product page.
+- Silent loops: `media/`, loaded when they come near the screen.
+- Style, iframe helper and the loop player: `assets/`. Fonts come from Google Fonts.
 
 ## Embedding
 
